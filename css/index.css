@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Asap&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background: white;
+    padding: 20px;
+}
+
+body{
+    background-color: #24272E;
+}
+
+header > h1 {   /* this can be done without > sigh */
+    color: #25272E;
+    text-align: center;
+    font-family: Asap, sans-serif;
+}
+
+.score-board{
+    margin: 20px auto; /* this assigns 20px margin to top and bottom */
+    border: 3px solid white;
+    border-radius: 4px;
+    text-align: center;
+    width: 200px;
+    color: white;
+    font-size: 46px;
+    padding: 15px 20px;
+    font-family: Asap, sans-serif;
+    position: relative;
+}
+
+.badge {
+    background: #E25840;
+    color: white;
+    font-size: 14px;
+    font-family: Asap, sans-serif;
+}
+
+#user-label {
+    position: absolute;
+    top: 30px;
+    left: -12px;
+}
+
+#computer-label {
+    position: absolute;
+    top: 30px;
+    right: -25px;
+}
+
+.result {
+    font-size: 40px;
+    color: white;
+}
+
+p { /* The guy mentioned .result > p {} , but then my "Make your move" was not aligning ...???? */
+    text-align: center;
+    font-weight: bold;
+    font-family: Asap, sans-serif;
+}
+
+#action-message {
+    font-size: 40px;
+    color: white;
+}
+
+#action-message p {
+    text-align: center;
+    font-weight: bold;
+    font-family: Asap, sans-serif;
+}
+
+.choices {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.choice{
+    display: inline-block;  /* This will make the images horizontal */
+    padding: 10px;
+}
+
+.choice:hover {
+    cursor: pointer;
+}
+
+#action-message {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
