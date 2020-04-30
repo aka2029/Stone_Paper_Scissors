@@ -8,14 +8,45 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
-rock_div.addEventListener("click", function() {
-  console.log("hey you clicked on rock");
-});
+function getComputerChoice() {
+  const choices = ["r", "p", "s"];
+  const randomNumber = Math.floor(Math.random() * 3);
+  return choices[randomNumber];
+}
 
-paper_div.addEventListener("click", function() {
-  console.log("hey you clicked on paper");
-});
+function game(userChoice) {
+  const computerChoice = getComputerChoice();
+  switch (userChoice + computerChoice) {
+    case "rp":
+    case "pr":
+    case "sp":
+      console.log("USER WINS.");
+      break;
+    case "rp":
+    case "ps":
+    case "rs":
+      console.log("USER LOSES.");
+      break;
+    case "rr":
+    case "pp":
+    case "ss":
+      console.log("It's a draw.");
+      break;
+  }
+}
 
-scissors_div.addEventListener("click", function() {
-  console.log("hey you clicked on scissors");
-});
+function main() {
+  rock_div.addEventListener("click", function() {
+    game("r");
+  });
+
+  paper_div.addEventListener("click", function() {
+    game("p");
+  });
+
+  scissors_div.addEventListener("click", function() {
+    game("s");
+  });
+}
+
+main();
